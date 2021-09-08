@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
+    <ScriptLocation Condition=" '$(ScriptLocation)'=='' ">$(NuGetPackageRoot)pheasant.msbuild.tasks.nuget\2.0.22\build\HelloWorld.ps1</ScriptLocation>
+  </PropertyGroup>
+
+  <Target Name="ExecutePowershellOnPostBuildScript" AfterTargets="AfterBuild">
+
+    <PropertyGroup>
+      <DynamicCommand>$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command "&amp; { $(ScriptLocation) $(TargetPath) } "</DynamicCommand>
+    </PropertyGroup>
+
+    <Exec Command="$(DynamicCommand)" />
+  </Target>
+  
+</Project>

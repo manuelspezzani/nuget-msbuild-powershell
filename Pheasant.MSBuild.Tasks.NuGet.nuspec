@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Pheasant.MSBuild.Tasks.NuGet</id>
+    <version>2.0.22</version>
+    <title></title>
+    <authors>manuel</authors>
+    <owners></owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>My package description.</description>
+  </metadata>  
+  <files> 
+    <!--file src="contentFiles\**" target="contentFiles" /--> 
+    <file src="build\Pheasant.MSBuild.Tasks.NuGet.props" target="build" /> 
+	<file src="build\HelloWorld.ps1" target="build" /> 
+  </files> 
+</package>

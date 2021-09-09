@@ -10,8 +10,7 @@
     <description>My package description.</description>
   </metadata>  
   <files> 
-    <!--file src="contentFiles\**" target="contentFiles" /--> 
-    <file src="build\Pheasant.MSBuild.Tasks.NuGet.props" target="build" /> 
+        <file src="build\Pheasant.MSBuild.Tasks.NuGet.props" target="build" /> 
 	<file src="build\HelloWorld.ps1" target="build" /> 
   </files> 
 </package>

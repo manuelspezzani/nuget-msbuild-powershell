@@ -9,10 +9,10 @@
   <Target Name="ExecutePowershellOnPostBuildScript" AfterTargets="AfterBuild">
 
     <PropertyGroup>
-      <DynamicCommand>$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command "&amp; { $(ScriptLocation) $(TargetPath) } "</DynamicCommand>
+      <PowerShellCommand>$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command "&amp; { $(ScriptLocation) $(TargetPath) } "</PowerShellCommand>
     </PropertyGroup>
 
-    <Exec Command="$(DynamicCommand)" />
+    <Exec Command="$(PowerShellCommand)" />
   </Target>
   
 </Project>

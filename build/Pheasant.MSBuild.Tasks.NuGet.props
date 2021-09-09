@@ -3,6 +3,7 @@
 
   <PropertyGroup>
     <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
+    <!-- TODO - it's ugly to have the package version number here: can we remove it somehow? -->
     <ScriptLocation Condition=" '$(ScriptLocation)'=='' ">$(NuGetPackageRoot)pheasant.msbuild.tasks.nuget\2.0.22\build\HelloWorld.ps1</ScriptLocation>
   </PropertyGroup>
 

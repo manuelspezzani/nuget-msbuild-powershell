@@ -3,7 +3,7 @@ Sample package with an MSBuild .props file calling a powershell file
 
 Just `nuget pack` the nuspec file and the resulting package will: 
 - import the .props file to the target project
-- on post-build it will the HelloWorld.ps1 file will be automatically invoked
+- on post-build the HelloWorld.ps1 file will be automatically invoked
 
 Todo:
 - [ ] test on a .NET Framework project (currently tested only on .NET Core)
